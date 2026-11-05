@@ -15,7 +15,7 @@ pipeline {
                       string(credentialsId: 'kubernetes-jenkis-server-account', variable: 'api_token')
                       ]) {
             sh 'kubectl --token $api_token --server https://127.0.0.1:50031/ --insecure-skip-tls-verify=true apply -f jenkins_kubernetes_CI_CD
-/deployment-billing-app-back-jenkins.yaml '
+deployment-billing-app-back-jenkins.yaml '
           }
 
         }
