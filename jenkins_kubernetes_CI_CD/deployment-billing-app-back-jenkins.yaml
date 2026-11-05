@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: billing-app-back-jenkins
-          image: salvatoreacevedo/billingapp
+          image: salvatoreacevedo/biilingapp
           ports:
-            - containerPort: 7080
+            - containerPort: 7280
               name: billingappbport
 ---
 kind: Service
@@ -28,7 +28,7 @@ metadata:
 spec:   
   ports:
   - name: billing-app-back-jenkins
-    port: 7080
+    port: 7280
     nodePort : 31780 
   #type: LoadBalancer
   type: NodePort
